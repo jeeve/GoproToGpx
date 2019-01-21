@@ -16,12 +16,10 @@ def getVmax(fichier):
 
     return vmax
 
-
 tableau = {}
 for element in os.listdir(chemin):
     if element.endswith('-gps.csv'):
         tableau[element] = getVmax(element)
-
 
 mavar = tableau.items()
 montri = sorted(mavar, key=lambda x: x[1], reverse=True)
